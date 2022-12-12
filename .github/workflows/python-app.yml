@@ -44,6 +44,12 @@ jobs:
     - name : cypress install
       run: |
         npm install cypress
+    - name : cypress
+      uses: cypress-io/github-action@v4
+    with:
+    start: streamlit run app
+    
+    
 
 
 #build and push to dockerhub
