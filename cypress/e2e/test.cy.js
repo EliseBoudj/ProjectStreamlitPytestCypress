@@ -1,6 +1,6 @@
 describe("empty spec", () => {
   it("passes", () => {
-    cy.visit("http://localhost:8501/");
+    cy.visit("https://eliseboudj-projectstreamlitpytestcypress-model-dashboard-vp1ura.streamlit.app/");
     cy.get(
       ":nth-child(2) > .stNumberInput > .css-1rvyln1 > .st-bd > .st-b3 > .st-bc"
     ).type(205);
