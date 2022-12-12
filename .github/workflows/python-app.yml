@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: run streamlit
       run: |
-        streamlit run model_dashboard.py
+        streamlit run model_dashboard.py --server.gatherUsageStats False
     - name : pytest
       run: |
         pytest test.py -s
