@@ -40,14 +40,18 @@ jobs:
     - name : pytest
       run: |
         pytest test.py -s
+    - name : streamlit run 
+      run: |
+        streamlit run model_dashboard.py &
+    
         
     - name : cypress install
       run: |
         npm install cypress
+        
     - name : cypress
-      uses: cypress-io/github-action@v4
-    with:
-    start: streamlit run app
+      run: |
+        npx cypress run 
     
     
 
